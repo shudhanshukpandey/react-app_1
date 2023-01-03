@@ -43,7 +43,7 @@ function App() {
     </div> */}
 
 
-<Navbar/>
+<Navbar title="TextUtils"/>
   
 
 
