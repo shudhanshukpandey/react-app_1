@@ -35,6 +35,11 @@ Navbar.prototype={
     
 }
 
+// Navbar.prototype={
+//     title:PropTypes.string.isRequired,  // will git error if not title is passed or no default value found
+    
+// }
+
 // will show error in console  is string not passed
 
 

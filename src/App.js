@@ -1,6 +1,7 @@
 // import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar';
+import TextForm from './components/TextForm';
 
 // function App() {
 //   return (
@@ -49,7 +50,11 @@ function App() {
 
 */}
   
+  <div className="container">
+    
+  <TextForm title="Enter text to analyze"/>
 
+  </div>
 
     </>
     
