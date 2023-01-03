@@ -79,3 +79,17 @@ export default App;
 //for error (no closing tag) use "/" at the end eg <input/>
 //class= changed to className=, href="#" changed to href="/"
 
+//module1
+// let a="data";
+// let b="data2";
+
+// export default a;
+// export {b}  ['{}' are used if default export is not used]
+
+// module2
+
+// import a, {b} from './module1.extension' [a can written as anything as it is default export as for b or similar exports 
+// it has to be the same name and inside '{}']
+// console.log(a)
+// console.log(b)
+
