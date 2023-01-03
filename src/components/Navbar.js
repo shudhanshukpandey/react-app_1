@@ -1,4 +1,6 @@
 import React from 'react'
+import PropTypes from 'prop-types'  // importing proptypes , works like marshmellow [impt]
+
 
 export default function Navbar(props) {
     const {title="test"} = props  // giving default value to props, [props?"":""] can also be used but not recomended
@@ -26,4 +28,16 @@ export default function Navbar(props) {
     </div>
   </nav>
   )
+}
+
+Navbar.prototype={
+    title:PropTypes.string,
+    
+}
+
+// will show error in console  is string not passed
+
+
+Navbar.defaultProps={
+    title:"set default value like this"
 }
