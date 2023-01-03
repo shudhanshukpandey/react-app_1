@@ -43,7 +43,11 @@ function App() {
     </div> */}
 
 
-<Navbar title="TextUtils"/>
+<Navbar title="TextUtils"/>    
+{/* for passing multi value in props
+<Navbar title="TextUtils" AboutText="abour text"/> dont use ',' 
+
+*/}
   
 
 
