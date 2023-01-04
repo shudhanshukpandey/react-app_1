@@ -1,7 +1,8 @@
 // import logo from './logo.svg';
-import './App.css';
-import Navbar from './components/Navbar';
-import TextForm from './components/TextForm';
+import "./App.css";
+import About from "./components/About";
+import Navbar from "./components/Navbar";
+// import TextForm from './components/TextForm';
 
 // function App() {
 //   return (
@@ -24,12 +25,11 @@ import TextForm from './components/TextForm';
 //   );
 // }
 
-
 // let value="jai bhawani"
 function App() {
   return (
     <>
-    {/* <div className="first">lovely</div>
+      {/* <div className="first">lovely</div>
 
     <nav>
       <li>Home</li>
@@ -43,27 +43,27 @@ function App() {
       </p>
     </div> */}
 
+      <div className="container0">
+        <Navbar title="TextUtils" />
+      </div>
 
-<Navbar title="TextUtils"/>    
-{/* for passing multi value in props
+      {/* for passing multi value in props
 <Navbar title="TextUtils" AboutText="abour text"/> dont use ',' 
 
 */}
-  
-  <div className="container">
-    
-  <TextForm title="Enter text to analyze"/>
 
-  </div>
+      <div className="container">
+        {/* <TextForm title="Enter text to analyze"/> */}
 
+        <About />
+      </div>
     </>
-    
   );
 }
 
 export default App;
 
-// things inside return will be between parenthesis(); y? because because react dom takes only one tag if 
+// things inside return will be between parenthesis(); y? because because react dom takes only one tag if
 // multiple tag are neaded use empty tag(<> remaining tags </>) and add all the remaining tag
 // most of the times only return value is changed
 //jsx is syntax extension of js through wich we can write html js?
@@ -79,8 +79,7 @@ export default App;
 
 // module2
 
-// import a, {b} from './module1.extension' [a can written as anything as it is default export as for b or similar exports 
+// import a, {b} from './module1.extension' [a can written as anything as it is default export as for b or similar exports
 // it has to be the same name and inside '{}']
 // console.log(a)
 // console.log(b)
-
