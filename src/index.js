@@ -8,7 +8,8 @@ import { BrowserRouter } from 'react-router-dom';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter> 
+    {/* necessary for routing like href */}
     <App />
     </BrowserRouter>
   </React.StrictMode>

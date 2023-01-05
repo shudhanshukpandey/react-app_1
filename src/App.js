@@ -6,7 +6,7 @@ import Alert from "./components/Alert";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 
-import {
+import {                         //href alternative for react
   BrowserRouter as Router,
   Switch,
   Routes,
@@ -93,7 +93,8 @@ function App() {
       <div className="container my-3">
         {/* <TextForm title="Enter text to analyze" showAlert={showAlert} /> */}
         {/* <About /> */}
-        Switch has been replaced with routes here's the code
+        Switch has been replaced with routes here's the code 
+        {/* template for href alternative */}
         {/* <Router> */}
           <Routes>
             <Route exact path="/" element={<TextForm />} />
