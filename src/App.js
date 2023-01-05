@@ -1,4 +1,5 @@
 // import logo from './logo.svg';
+import { useState } from "react";
 import "./App.css";
 import About from "./components/About";
 import Navbar from "./components/Navbar";
@@ -27,6 +28,21 @@ import Navbar from "./components/Navbar";
 
 // let value="jai bhawani"
 function App() {
+  const [mode,setMode]=useState("light");   //tels whether dark mode is enablaled or not
+
+  const toggleMode=()=>{                     //making a function for toggle mode
+    if (mode==='light')
+    {
+      setMode('dark');
+      document.body.style.backgroundColor="pink";
+    }
+    else{
+      setMode("light");
+      
+      document.body.style.backgroundColor="white";
+    }
+
+  }
   return (
     <>
       {/* <div className="first">lovely</div>
@@ -44,7 +60,8 @@ function App() {
     </div> */}
 
       <div className="container0">
-        <Navbar title="TextUtils" />
+        <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode}/>     
+        {/* passing function as props */}
       </div>
 
       {/* for passing multi value in props
