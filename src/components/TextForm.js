@@ -8,17 +8,22 @@ export default function TextForm(props) {
     const handleOnChange=(event)=>{
         setText(event.target.value)  //updating text variable when input box is updated in any manner
         // console.log(text,event.target.value)
+
+       
     }
     
     // up dating box value when button is clicked
     const handleUpClick =()=>{
         // console.log("button clicked")
         setText(text.toUpperCase())  // updating text to upper when button is clicked
+        props.showAlert("text changed to upper","success");   //changing alert message as per input click, warning is functionality of bootstrab
     }
 
     const handleLoClick =()=>{
         // console.log("button clicked")
         setText(text.toLowerCase())  // updating text to upper when button is clicked
+        props.showAlert("text changed to lower","warning");   //changing alert message as per input click
+    
     }
 
 

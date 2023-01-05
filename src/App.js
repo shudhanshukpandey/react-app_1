@@ -2,8 +2,17 @@
 import { useState } from "react";
 import "./App.css";
 import About from "./components/About";
+import Alert from "./components/Alert";
 import Navbar from "./components/Navbar";
-// import TextForm from './components/TextForm';
+import TextForm from "./components/TextForm";
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Routes,
+  Route,
+  Link,
+} from "react-router-dom";
 
 // function App() {
 //   return (
@@ -28,21 +37,32 @@ import Navbar from "./components/Navbar";
 
 // let value="jai bhawani"
 function App() {
-  const [mode,setMode]=useState("light");   //tels whether dark mode is enablaled or not
-
-  const toggleMode=()=>{                     //making a function for toggle mode
-    if (mode==='light')
-    {
-      setMode('dark');
-      document.body.style.backgroundColor="pink";
-    }
-    else{
+  const [mode, setMode] = useState("light"); //tels whether dark mode is enablaled or not
+  const toggleMode = () => {
+    //making a function for toggle mode
+    if (mode === "light") {
+      setMode("dark");
+      document.body.style.backgroundColor = "pink";
+      // document.title="can change title"
+      showAlert("dark  Mode Enabled", "success");
+    } else {
       setMode("light");
-      
-      document.body.style.backgroundColor="white";
-    }
 
-  }
+      document.body.style.backgroundColor = "white";
+      showAlert("light mode enabled", "success");
+    }
+  };
+
+  const [alert, setAlert] = useState(null);
+  const showAlert = (message, type) => {
+    setAlert({
+      msg: message,
+      type: type,
+    });
+    setTimeout(() => {
+      setAlert(null);
+    }, 3000);
+  };
   return (
     <>
       {/* <div className="first">lovely</div>
@@ -60,8 +80,9 @@ function App() {
     </div> */}
 
       <div className="container0">
-        <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode}/>     
+        <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} />
         {/* passing function as props */}
+        <Alert alert={alert} />
       </div>
 
       {/* for passing multi value in props
@@ -69,10 +90,18 @@ function App() {
 
 */}
 
-      <div className="container">
-        {/* <TextForm title="Enter text to analyze"/> */}
-
-        <About />
+      <div className="container my-3">
+        {/* <TextForm title="Enter text to analyze" showAlert={showAlert} /> */}
+        {/* <About /> */}
+        Switch has been replaced with routes here's the code
+        {/* <Router> */}
+          <Routes>
+            <Route exact path="/" element={<TextForm />} />
+            <Route exact path="/about" element={<About />} />
+          </Routes>
+        {/* </Router> */}
+        
+        
       </div>
     </>
   );
